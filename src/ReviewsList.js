@@ -5,6 +5,9 @@ import { Link } from "react-router-dom";
 import "./ReviewsList.css";
 
 export default function ReviewsList() {
+  const BASE_URL = process.env.REACT_APP_BASE_URL
+  console.log(BASE_URL)
+
   const [filter, setFilter] = useState("");
   const [reviews, setReviews] = useState([]);
   const [filteredReviews, setFilteredReviews] = useState([]);

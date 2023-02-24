@@ -1,4 +1,4 @@
-const BASE_URL = "https://tricky-treadmill-back-end-production.up.railway.app/treadmills";
+const BASE_URL = process.env.REACT_APP_BASE_URL;
 
 export function getAllReviews() {
   const request = fetch(`${BASE_URL}/`)
@@ -16,10 +16,10 @@ export function getOneReview(id) {
 }
 
 export function createNewReview(review) {
-    const request = fetch(`${BASE_URL}/`, {
-        method: 'POST',
-        body: JSON.stringify(review),
-        headers: { "Content-Type": "application/json"}
+  const request = fetch(`${BASE_URL}/`, {
+    method: "POST",
+    body: JSON.stringify(review),
+    headers: { "Content-Type": "application/json" },
   })
     .then((response) => response.json())
     .then((newReviewEnd) => newReviewEnd)
@@ -28,25 +28,24 @@ export function createNewReview(review) {
 }
 
 export function updateReview(id, review) {
-    const request = fetch(`${BASE_URL}/${id}`, {
-      method: "PUT",
-      body: JSON.stringify(review),
-      headers: {
-        "Content-Type": "application/json",
-      },
-    })
-      .then((response) => response.json())
-      .then((reviewUpdated) => reviewUpdated)
-      .catch((err) => console.log("Error updating"));
-      
-    return request
-    
+  const request = fetch(`${BASE_URL}/${id}`, {
+    method: "PUT",
+    body: JSON.stringify(review),
+    headers: {
+      "Content-Type": "application/json",
+    },
+  })
+    .then((response) => response.json())
+    .then((reviewUpdated) => reviewUpdated)
+    .catch((err) => console.log("Error updating"));
+
+  return request;
 }
 
 export function deleteReview(id) {
-    const request = fetch(`${BASE_URL}/${id}`, { method: "DELETE" })
-      .then((response) => response.json())
-      .then((reviewDeleted) => reviewDeleted)
-      .catch((error)=> console.log("Error deleting"))
-return request
+  const request = fetch(`${BASE_URL}/${id}`, { method: "DELETE" })
+    .then((response) => response.json())
+    .then((reviewDeleted) => reviewDeleted)
+    .catch((error) => console.log("Error deleting"));
+  return request;
 }
