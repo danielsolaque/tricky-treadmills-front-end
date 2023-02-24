@@ -18,6 +18,8 @@ function App() {
           <Route path="/reviews/:id" element={<ShowOne />} />
           <Route path="/reviews/:id/edit" element={<Edit />} />
         </Routes>
+
+        <h2 style={{ textAlign: "center" }}>Soy daniel</h2>
       </BrowserRouter>
     </div>
   );
