@@ -5,6 +5,7 @@ import ReviewsList from "./ReviewsList";
 import New from "./New";
 import ShowOne from "./ShowOne";
 import Edit from "./Edit";
+import Footer from "./Footer";
 
 function App() {
   return (
@@ -18,8 +19,7 @@ function App() {
           <Route path="/reviews/:id" element={<ShowOne />} />
           <Route path="/reviews/:id/edit" element={<Edit />} />
         </Routes>
-
-        <h2 style={{ textAlign: "center" }}>Soy daniel</h2>
+        <Footer />
       </BrowserRouter>
     </div>
   );
