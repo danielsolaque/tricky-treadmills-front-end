@@ -28,7 +28,7 @@ export default function ShowOne() {
       <div className={styles.detail_card}>
         <div>
           <figure className={styles.thumbnail}>
-            <img src={oneReviewState.thumbnail_url} />
+            <img src={oneReviewState.thumbnail_url} alt="thumbnail img" />
           </figure>
 
           <div className={styles.detail_content}>

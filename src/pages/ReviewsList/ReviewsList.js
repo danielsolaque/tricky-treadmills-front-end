@@ -42,7 +42,7 @@ export default function ReviewsList() {
         {filteredReviews.map((review) => (
           <div className={styles.review_card} key={review.id}>
             <figure>
-              <img src={review.thumbnail_url} />
+              <img src={review.thumbnail_url} alt="thumbnail img" />
             </figure>
 
             <section className={styles.content}>
