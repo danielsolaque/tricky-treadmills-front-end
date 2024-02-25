@@ -1,7 +1,4 @@
 import React from "react";
-import MyPhoto from "../../images/fotoPersonal.jpg";
-
-import { Image } from "react-bootstrap";
 
 import styles from "./Footer.module.css";
 
