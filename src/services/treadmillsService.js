@@ -1,5 +1,15 @@
 const BASE_URL = process.env.REACT_APP_BASE_URL;
 
+function mapToFormData(payload) {
+  const formData = new FormData();
+
+  Object.entries(payload).forEach(([key, value]) => {
+    formData.append(key, value);
+  });
+
+  return formData;
+}
+
 export function getAllReviews() {
   const request = fetch(`${BASE_URL}/`)
     .then((response) => response.json())
@@ -16,10 +26,11 @@ export function getOneReview(id) {
 }
 
 export function createNewReview(review) {
+  const formData = mapToFormData(review);
+
   const request = fetch(`${BASE_URL}/`, {
     method: "POST",
-    body: JSON.stringify(review),
-    headers: { "Content-Type": "application/json" },
+    body: formData,
   })
     .then((response) => response.json())
     .then((newReviewEnd) => newReviewEnd)
@@ -28,12 +39,11 @@ export function createNewReview(review) {
 }
 
 export function updateReview(id, review) {
+  const formData = mapToFormData(review);
+
   const request = fetch(`${BASE_URL}/${id}`, {
     method: "PUT",
-    body: JSON.stringify(review),
-    headers: {
-      "Content-Type": "application/json",
-    },
+    body: formData,
   })
     .then((response) => response.json())
     .then((reviewUpdated) => reviewUpdated)

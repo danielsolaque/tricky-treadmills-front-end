@@ -1,0 +1,74 @@
+.review_detail_wrapper {
+    padding: 3rem;
+    width: 35%;
+    margin: auto;
+}
+
+.detail_card {
+    overflow: hidden;
+    border-radius: 1rem;
+    box-shadow: var(--box-shadow);
+    background-color: var(--primary-color);
+    color: white
+}
+
+.thumbnail {
+    margin: 0;
+}
+
+.thumbnail img {
+    width: 100%;
+}
+
+.detail_content {
+    padding: 1.5rem 2rem;
+}
+
+.detail_content header h3 {
+    font-size: 2rem;
+    margin: 0;
+}
+
+.chip {
+    width: fit-content;
+    background: white;
+    color: var(--primary-color);
+    padding: 0.25rem 0.5rem;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 0.25rem;
+    margin-block: 1rem;
+}
+
+.button_group {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.button {
+    font-size: 1rem;
+    padding: 0.5rem 2rem;
+    color: white;
+    border-radius: 0.25rem;
+    font-weight: bold;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+}
+
+.edit {
+    background-color: #fbbf24;
+}
+
+.edit:hover {
+    background-color: #ca8a04;
+}
+
+.delete {
+    background-color: #ef4444;
+}
+
+.delete:hover {
+    background-color: #dc2626;
+}

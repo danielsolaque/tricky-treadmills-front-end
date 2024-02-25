@@ -1,49 +1,62 @@
-.upsert-form-header {
+.upsert_review_wrapper {
+    width: 30%;
+    margin-inline: auto;
+    padding: 3rem;
+}
+
+.form_card {
+    border-radius: 1rem;
+    box-shadow: var(--box-shadow);
+    padding: 3rem;
+    background-color: white;
+}
+
+.upsert_form_header {
     text-align: center;
-    margin-top: 20px;
     color: #1b263b;
 }
 
-.upsert-form-header h1 {
-    margin-bottom: 0;
+.upsert_form_header h1 {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
 }
 
-.upsert-form {
+.upsert_form {
     display: flex;
     flex-direction: column;
     gap: 12px;
-    padding: 24px;
     margin: auto;
-    width: 17.5%;
 }
 
-.form-field {
+.form_field {
     display: flex;
     flex-direction: column;
     gap: 4px;
 }
 
-.form-field label {
+.form_field label {
     font-size: 20px;
     color: #777777;
 }
 
-.form-field input,
-select {
+.form_field input, select, textarea {
+    font-family: var(--font-family);
     padding: 8px;
     font-size: 18px;
     border-radius: 4px;
     border: 2px solid #1b263b;
     outline: none;
+    resize: none;
 }
 
-.form-field input:focus {
+.form_field input:focus {
     background-color: #283a5a1e;
 }
 
-.submit-button {
+.submit_button {
+    width: 100%;
     margin: auto;
-    width: max-content;
+    margin-top: 1.5rem;
     font-size: 20px;
     padding: 12px 36px;
     background-color: #1b263b;
@@ -54,12 +67,12 @@ select {
     transition: 0.25s;
 }
 
-.submit-button:hover {
-    transform: scale(1.15);
+.submit_button:hover {
+    opacity: 0.8;
 }
 
 @media (max-width: 768px) {
-    .upsert-form {
+    .upsert_form {
         width: 75%;
     }
 }
