@@ -17,8 +17,8 @@ export default function Home() {
       <div className={styles.home_content_wrapper}>
         <div className={styles.home_content}>
           <header>
-            <h2>Welcome to the most completeful treadmills reviews database</h2>
-            <h3>Search, find and fix your treadmill's issue</h3>
+            <h2>Welcome to the most comprehensive treadmill reviews database</h2>
+            <h3>Search, discover, and resolve your equipment's issues</h3>
           </header>
 
           <div className={styles.button_group}>
