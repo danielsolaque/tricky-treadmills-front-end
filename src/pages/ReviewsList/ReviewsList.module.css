@@ -38,8 +38,8 @@
 .review_card img {
     display: block;
     margin: 0;
-    width: 360px; 
-    height: 100%;
+    width: 300px; 
+    height: 300px; 
     object-fit: cover;
 }
 
@@ -74,6 +74,14 @@
 
 .description {
     flex-grow: 1;
+}
+
+.description p {
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .info {
